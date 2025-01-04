@@ -4,7 +4,6 @@ from hyperprameter import *
 from tensorflow.keras import layers, models
 from load_data import *
 
-text_vectorization = load_data.text_vectorization
 max_length = 100
 vocab_size = text_vectorization.vocabulary_size
 dropout_rate = .1

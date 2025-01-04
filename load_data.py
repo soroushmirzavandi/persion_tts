@@ -38,7 +38,7 @@ valid_ds1 = valid_ds1.batch(hp.batch_size, drop_remainder=True)
 # Function to load data
 def load_data(audio_paths, texts):
     def load_wav_file(audio_path):
-        audio_path = tf.strings.join(['/content/drive/MyDrive/wavs/', audio_path])
+        audio_path = tf.strings.join(['./wavs/', audio_path])
         audio_binary = tf.io.read_file(audio_path)
         audio, sample_rate= tf.audio.decode_wav(audio_binary,  desired_channels=1, desired_samples=-1)
         expected_sample_rate = 22050
